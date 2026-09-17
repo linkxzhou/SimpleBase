@@ -124,6 +124,7 @@ docker run -p 8080:8080 --env-file .env simplebased
 
 ## 文档
 
+- 控制台顶栏 **使用文档**（`/docs`）阅读本仓库 `docs/` 下的使用说明
 - [内部模块说明](internal/README.md)
 - [部署文档与 runbook](docs/deployment.md)
 - [迁移指南](docs/migration-guide.md)

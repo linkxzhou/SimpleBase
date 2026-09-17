@@ -1,0 +1,45 @@
+{
+  "title": "SimpleBase 使用文档",
+  "defaultModule": "guide",
+  "defaultSlug": "introduction",
+  "modules": [
+    {
+      "id": "guide",
+      "title": "入门",
+      "pages": [
+        { "slug": "introduction", "title": "简介", "file": "guide/introduction.md" },
+        { "slug": "quickstart", "title": "快速开始", "file": "guide/quickstart.md" },
+        { "slug": "concepts", "title": "核心概念", "file": "guide/concepts.md" }
+      ]
+    },
+    {
+      "id": "console",
+      "title": "控制台",
+      "pages": [
+        { "slug": "overview", "title": "控制台概览", "file": "console/overview.md" }
+      ]
+    },
+    {
+      "id": "ops",
+      "title": "运维",
+      "pages": [
+        { "slug": "deployment", "title": "部署", "file": "deployment.md" },
+        { "slug": "migration", "title": "迁移指南", "file": "migration-guide.md" }
+      ]
+    },
+    {
+      "id": "api",
+      "title": "API",
+      "pages": [
+        { "slug": "overview", "title": "HTTP API", "file": "api/overview.md" }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "参考",
+      "pages": [
+        { "slug": "ducklake", "title": "DuckLake 规格", "file": "ducklake-docs.md" }
+      ]
+    }
+  ]
+}

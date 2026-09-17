@@ -56,6 +56,15 @@
           <a-tooltip v-else title="连接设置">
             <SettingOutlined class="sb-icon-link" @click="authStore.openDrawer()" />
           </a-tooltip>
+          <a
+            href="/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sb-docs-link"
+          >
+            <BookOutlined />
+            <span>使用文档</span>
+          </a>
           <a-tooltip title="GitHub">
             <a href="https://github.com/voocel/SimpleBase" target="_blank" class="sb-icon-link">
               <GithubOutlined />
@@ -82,7 +91,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useRoute } from 'vue-router'
-import { GithubOutlined, ReloadOutlined, MenuOutlined, SettingOutlined } from '@ant-design/icons-vue'
+import { GithubOutlined, ReloadOutlined, MenuOutlined, SettingOutlined, BookOutlined } from '@ant-design/icons-vue'
 import { isMock } from '../services/api'
 import { useAuthStore } from '../stores/auth'
 import NavMenu from '../components/NavMenu.vue'
@@ -215,6 +224,23 @@ function reload() {
 }
 .sb-icon-link:hover {
   color: var(--sb-primary);
+}
+.sb-docs-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--sb-text-secondary);
+  font-size: var(--sb-fs-sm);
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: var(--sb-radius-sm);
+  border: 1px solid var(--sb-border-soft);
+  transition: var(--sb-transition);
+  line-height: 1.2;
+}
+.sb-docs-link:hover {
+  color: var(--sb-primary);
+  border-color: var(--sb-primary);
 }
 .sb-menu-toggle {
   font-size: 18px;
