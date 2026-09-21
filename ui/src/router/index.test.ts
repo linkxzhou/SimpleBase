@@ -26,6 +26,16 @@ describe('router', () => {
     const settings = router.getRoutes().find((r) => r.name === 'settings')
     expect(settings?.redirect).toBeTruthy()
     expect(settings?.components?.default).toBeUndefined()
+    if (typeof settings?.redirect === 'function') {
+      expect(settings.redirect({ path: '/settings', query: {}, hash: '', params: {}, fullPath: '/settings', redirectedFrom: undefined, matched: [], meta: {}, name: 'settings' } as never)).toEqual({
+        path: '/',
+        query: { settings: '1' }
+      })
+      expect(settings.redirect({ path: '/settings', query: { settings: 'appearance' }, hash: '', params: {}, fullPath: '/settings', redirectedFrom: undefined, matched: [], meta: {}, name: 'settings' } as never)).toEqual({
+        path: '/',
+        query: { settings: 'appearance' }
+      })
+    }
     const docs = router.getRoutes().find((r) => r.path === '/docs')
     expect(docs?.meta?.hidden).toBe(true)
   })
